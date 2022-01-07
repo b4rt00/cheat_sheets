@@ -13,15 +13,16 @@ Get-WindowsUpdate
 Install-WindowsUpdate
 ```
 
-## Install Active Directory
+## Install Roles
 ```powershell
+# AD DS and DNS
 Install-WindowsFeature DNS, AD-Domain-Services -IncludeManagementTools
 ```
 
 ## Create new forest
 ```powershell
-$DomainName="test.local"
-$DomainNetbios="TEST"
+$DomainName="test.local" # CHANGE ME
+$DomainNetbios="TEST"    # CHANGE ME
 
 Import-Module ADDSDeployment
 Install-ADDSForest `
@@ -51,3 +52,66 @@ Import-Csv -Path C:\users.csv | ForEach-Object {New-ADUser `
 -ChangePasswordAtLogon $true; `
 Write-Host $_.name OK}
 ```
+## Add/Remove computer
+```powershell
+Add-Computer -DomainName domain.local -NewName computer01 -Credential DOMAIN\administrator
+```
+
+## Set IP addressing
+```powershell
+# View interfaces
+Get-NetAdapter
+
+# View IP addresses
+Get-NetIPAddress
+
+# Set IP address
+New-NetIPAddress -InterfaceIndex <num> -IPAddress <IP>
+		-PrefixLength <mask_length> -DefaultGateway <IP>
+
+# View DNS serttings
+Get-DnsClientServerAddress
+Set-DnsClientServerAddress -InterfaceIndex <num> 
+		-ServerAddresses ("<IP>", "<IP>")
+```
+
+## Upgrade Windows Server Edition
+```powershell
+# Get current edition
+DISM /online /Get-CurrentEdition
+
+# Check available editions
+DISM /online /Get-TargetEditions
+
+# Upgrade the edition
+DISM /online /Set-Edition:<edition> /ProductKey:<key> /AcceptEula
+```
+
+## PowerShell Remote Session
+```powershell
+# Create new session
+New-PSSession -ComputerName <name>
+# View established sessions
+Get-PSSession
+# Enter selected session
+Enter-PSSession -ComputerName <name>
+# Disconnect from session
+Disconnect-PSSession -Id <num>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
