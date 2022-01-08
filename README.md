@@ -52,6 +52,10 @@ Import-Csv -Path C:\users.csv | ForEach-Object {New-ADUser `
 -ChangePasswordAtLogon $true; `
 Write-Host $_.name OK}
 ```
+Useful text formatting online tool: https://txtformat.com/
+Online CSV editor and viewer: https://www.convertcsv.com/csv-viewer-editor.htm
+
+
 ## Add/Remove computer
 ```powershell
 Add-Computer -DomainName domain.local -NewName computer01 -Credential DOMAIN\administrator
