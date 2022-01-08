@@ -53,6 +53,7 @@ Import-Csv -Path C:\users.csv | ForEach-Object {New-ADUser `
 Write-Host $_.name OK}
 ```
 Useful text formatting online tool: https://txtformat.com/
+
 Online CSV editor and viewer: https://www.convertcsv.com/csv-viewer-editor.htm
 
 
