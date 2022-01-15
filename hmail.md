@@ -6,6 +6,11 @@ Install `.NET 3.5 Framework Features`
 Install-WindowsFeature NET-Framework-Freatures
 ```
 
+Get Thunderbird client on your devices to test the server.
+```powershell
+wget "https://download.mozilla.org/?product=thunderbird-91.5.0-SSL&os=win64&lang=en-US" -OutFile $env:temp\thunderbird.exe; "$env:temp\thunderbird.exe" | powershell
+```
+
 ## Install
 Get the installer from https://www.hmailserver.com/download.
 
