@@ -19,6 +19,11 @@ Install-WindowsUpdate
 Install-WindowsFeature DNS, AD-Domain-Services -IncludeManagementTools
 ```
 
+## Install Firefox
+```powershell
+wget "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" -outfile $env:TEMP\firefox.exe
+``
+
 ## Create new forest
 ```powershell
 $DomainName="test.local" # CHANGE ME
