@@ -55,7 +55,7 @@ Import-Csv -Path C:\users.csv | ForEach-Object {New-ADUser `
 -AccountPassword (ConvertTo-SecureString -AsPlainText 'Passw0rd' -force) `
 -Enabled $true `
 -ChangePasswordAtLogon $true; `
-Write-Host $_.name OK}
+Write-Host [OK] $_.name}
 ```
 Useful text formatting online tool: https://txtformat.com/
 
