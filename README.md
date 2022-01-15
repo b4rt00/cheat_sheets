@@ -60,6 +60,7 @@ Online CSV editor and viewer: https://www.convertcsv.com/csv-viewer-editor.htm
 ## Add/Remove computer
 ```powershell
 Add-Computer -DomainName domain.local -NewName computer01 -Credential DOMAIN\administrator
+Remove-Computer -UnJoinDomainCredential DOMAIN\administrator -Restart
 ```
 
 ## Set IP addressing
