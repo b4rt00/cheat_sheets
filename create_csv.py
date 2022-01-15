@@ -48,5 +48,5 @@ for line in lines:
         print(f'[ERR] {name} {surname}')
     else:
         print(f'[OK] {name} {surname}')
-    time.sleep(.1)
+    time.sleep(.05)
 
