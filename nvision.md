@@ -2,6 +2,7 @@
 Get the installer from https://axence.net/en/
 
 Go through the installer.
+
 Make sure to add the AV exceptions.
 
 ## Migration
@@ -15,7 +16,11 @@ Make sure to add the AV exceptions.
 5. Make a full backup using the `DBBackup` tool.
     - launch the tools from `C:\Program Files (x86)\Axence\nVision\Backups`
     - point it to `C:\Program Files (x86)\Axence\nVision\Database\AtlasPG`
-6. Stop the `Axence nVision` service. 
+    - The backup file will be stored in the `Backups` directory.
+6. Stop the following services: 
+    - `Axence nVision`
+    - `Axence nVision Helper`
+    - `Axence nVision Web`
 7. Install nVision on the new machine.
     - use the installer from step 3.
     - do not start the program after installation.
@@ -24,3 +29,5 @@ Make sure to add the AV exceptions.
     - launch it from `C:\Program Files (x86)\Axence\nVision\Backups`.
     - point it to the full backup file.
 10. Start Axence Nvision.
+
+Make sure all the managed devices are turned on and give them up to 15 minutes to connect.
