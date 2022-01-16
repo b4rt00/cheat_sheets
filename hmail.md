@@ -3,7 +3,7 @@ Open ports `25` (SMTP), `110` (POP3), `143` (IMAP).
 
 Install `.NET 3.5 Framework Features`
 ```powershell
-Install-WindowsFeature NET-Framework-Freatures
+Install-WindowsFeature NET-Framework-Features
 ```
 
 Get Thunderbird client on your devices to test the server.
@@ -34,4 +34,6 @@ The migration process:
 - Replace the files
 - Start the hMailServer service on the new server
 
-
+## After the migration
+- run `ipconfig /flushdns` on endpoints
+- restart email client
