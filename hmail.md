@@ -16,17 +16,17 @@ Get the installer from https://www.hmailserver.com/download.
 
 Go throught the installer.
 
-Verify the hMailServer service is running.
+Verify the `hMailServer` service is running.
 
 ## Migration
 The hmail server files are stored in `C:\Program File (x86)\hMailServer`.
 
-Files to migrate:
+**Files to migrate:**
 - `Data` directory
 - `Database\hMailServer.sdf`
 - `Bin\hMailServer.INI`
 
-The migration process:
+**The migration process:**
 - Stop the hMailServer service on the old server
 - Change the DNS records to point to the new server
 - Install hMailServer on the new server
