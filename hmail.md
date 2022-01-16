@@ -20,6 +20,7 @@ Verify the hmail service is runnning.
 
 ## Migration
 The hmail server files are stored in `C:\Program File (x86)\hMailServer`.
+
 Files to migrate:
 - `Data` directory
 - `Database\hMailServer.sdf`
