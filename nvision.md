@@ -8,7 +8,7 @@ Make sure to add the AV exceptions.
 ## Migration
 1. Propagate the new Atlas address
     - `Tools --> Agents --> Propagate new Atlas address`
-2. Make sure all the agents received new address.
+2. Make sure all the agents received the new address.
     - `Agents --> Pending operation`
     - Note: You have to look quickly.
 3. Copy the installer from `C:\Program Files (x86)\Axence\nVision\Sources\nVisionSetup.exe`
