@@ -100,7 +100,7 @@ DISM /online /Set-Edition:<edition> /ProductKey:<key> /AcceptEula
 
 ## Change time zone
 ```powershell
-Set-TimeZone -Id "Centeral European Standard Time"
+Set-TimeZone -Id "Central European Standard Time"
 ```
 
 ## PowerShell Remote Session
