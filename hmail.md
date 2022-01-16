@@ -16,7 +16,7 @@ Get the installer from https://www.hmailserver.com/download.
 
 Go throught the installer.
 
-Verify the hmail service is runnning.
+Verify the hMailServer service is running.
 
 ## Migration
 The hmail server files are stored in `C:\Program File (x86)\hMailServer`.
