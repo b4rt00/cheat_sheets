@@ -98,6 +98,11 @@ DISM /online /Get-TargetEditions
 DISM /online /Set-Edition:<edition> /ProductKey:<key> /AcceptEula
 ```
 
+## Change time zone
+```powershell
+Set-TimeZone -Id "Centeral European Standard Time"
+```
+
 ## PowerShell Remote Session
 ```powershell
 # Create new session
