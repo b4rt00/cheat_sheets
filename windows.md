@@ -51,6 +51,7 @@ Import-Csv -Path C:\users.csv | ForEach-Object {New-ADUser `
 -givenname $_.given_name `
 -surname $_.surname `
 -userPrincipalName $_.principal_name `
+-SamAccountName $sam `
 -Path $_.ou `
 -AccountPassword (ConvertTo-SecureString -AsPlainText 'Passw0rd' -force) `
 -Enabled $true `
