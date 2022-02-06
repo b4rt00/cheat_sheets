@@ -71,7 +71,18 @@ Get-IscsiSession | Register-IscsiSession
 
 ```
 
+## Create a Failover Cluster
+```powershell
+# Install Failover Cluster Role on nodes
+Install-WindowsFeature Failover-Clustering
 
+# Run cluster validation tests
+Test-Cluster -Node hyper1,hyper2
+
+# Create the cluster
+New-Cluster -Name cluster1 -Node hyper1,hyper2 -StaticAddress 192.168.8.103
+
+```
 
 
 

@@ -123,7 +123,6 @@ Set-NetFirewallRule -DisplayGroup 'Remote Event Log Management' -Enabled True
 Set-NetFirewallRule -DisplayGroup 'Remote Volume Management' -Enabled True
 Set-NetFirewallRule -DisplayGroup 'Remote Service Management' -Enabled True
 Set-NetFirewallRule -DisplayGroup 'Remote Scheduled Tasks Management' -Enabled True
-Set-NetFirewallRule -DisplayGroup 'Windows Firewall Remote Management' -Enabled True
 Set-NetFirewallRule -DisplayName 'Windows Management Instrumentation (DCOM-In)' -Enabled True
 
 # Administrating computer
