@@ -27,12 +27,12 @@ The hmail server files are stored in `C:\Program File (x86)\hMailServer`.
 - `Bin\hMailServer.INI`
 
 **The migration process:**
-- Stop the hMailServer service on the old server
-- Change the DNS records to point to the new server
-- Install hMailServer on the new server
-- Stop the hMailServer service on the new server
-- Replace the files
-- Start the hMailServer service on the new server
+- Stop the hMailServer service on the old server.
+- Change the DNS records to point to the new server.
+- Install hMailServer on the new server.
+- Stop the hMailServer service on the new server.
+- Replace the files.
+- Start the hMailServer service on the new server.
 
 ## After the migration
 - run `ipconfig /flushdns` on endpoints
