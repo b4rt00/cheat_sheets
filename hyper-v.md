@@ -47,4 +47,38 @@ Add-VMDvdDrive -VMName test -Path "C:\iso\debian.iso"
 # Disable SecureBoot
 Set-VMFirmware test -EnableSecureBoot Off
 
+# Add notes
+Set-VM -Name test -Notes "Notes here"
+
 ```
+
+## Configure iSCSI drives
+```powershell
+# Start the MSiSCSI service
+Start-Service MSiSCSI
+
+# Automatically start MSiSCSI service
+Set-Service MSiSCSI -StartupType Automatic
+
+# Add target portal
+New-IscsiTargetPortal -TargetPortalAddress 192.168.8.105
+
+# Connect initiators to target
+Get-IscsiTarget | Connect-IscsiTarget
+
+# Make the connection persist
+Get-IscsiSession | Register-IscsiSession
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
