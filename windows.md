@@ -116,8 +116,14 @@ Enter-PSSession -ComputerName <name>
 Disconnect-PSSession -Id <num>
 ```
 
-
-
+## Windows Server Core Firewall Rules
+```powershell
+Set-NetFirewallRule -DisplayGroup 'Remote Event Log Management' -Enabled $true
+Set-NetFirewallRule -DisplayGroup 'Remote Volume Management' -Enabled $true
+Set-NetFirewallRule -DisplayGroup 'Remote Service Management' -Enabled $true
+Set-NetFirewallRule -DisplayGroup 'Remote Scheduled Tasks Management' -Enabled $true
+Set-NetFirewallRule -DisplayName 'Windows Management Instrumentation (DCOM-In)' -Enabled $true
+```
 
 
 
