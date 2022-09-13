@@ -41,7 +41,12 @@ for line in lines:
     sam = principal_name
     if (len(sam) > 20):
         sam = name[0] + surname
-        print(f'[INFO] {name} {surname} -> {sam}')
+        if (len(sam) > 20):
+            print(f'[ERR] {name} {surname}')
+        else:
+            print(f'[INFO] {name} {surname} -> {sam}')
+    else:
+       print(f'[OK] {name} {surname}') 
 
 
     # Write to outfile
@@ -52,6 +57,5 @@ for line in lines:
     fout.write(f'{sam},')
     fout.write(f'"OU=new_users,DC={sub_domain},DC={top_domain}"\n')
 
-    # Print OK message and sleep
-    print(f'[OK] {name} {surname}')
+    # Sleep
     time.sleep(.05)
