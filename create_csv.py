@@ -26,7 +26,7 @@ fout = open("users.csv", "w")
 lines = fin.readlines()
 
 # write headers to output file
-fout.write("name,given_name,surname,principal_name,ou\n")
+fout.write("name,given_name,surname,principal_name,sam,ou\n")
 
 for line in lines:
     # Extract name, surname
@@ -36,12 +36,14 @@ for line in lines:
 
     # Create principal name
     principal_name = line.strip().lower().replace(" ", ".")
+    sam = principal_name
 
     # Write to outfile
     fout.write(f'{name} {surname},')
     fout.write(f'{name},')
     fout.write(f'{surname},')
     fout.write(f'{principal_name},')
+    fout.write(f'{sam}')
     fout.write(f'"OU=new_users,DC={sub_domain},DC={top_domain}"\n')
     # Check if full name no longer then 20 chars
     if (len(line.strip()) > 20):
