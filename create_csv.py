@@ -36,7 +36,13 @@ for line in lines:
 
     # Create principal name
     principal_name = line.strip().lower().replace(" ", ".")
+
+    # Create sam account name
     sam = principal_name
+    if (len(sam) > 20):
+        sam = name[0] + surname
+        print(f'[INFO] {name} {surname} -> {sam}')
+
 
     # Write to outfile
     fout.write(f'{name} {surname},')
@@ -45,10 +51,7 @@ for line in lines:
     fout.write(f'{principal_name},')
     fout.write(f'{sam},')
     fout.write(f'"OU=new_users,DC={sub_domain},DC={top_domain}"\n')
-    # Check if full name no longer then 20 chars
-    if (len(line.strip()) > 20):
-        print(f'[ERR] {name} {surname}')
-    else:
-        print(f'[OK] {name} {surname}')
-    time.sleep(.05)
 
+    # Print OK message and sleep
+    print(f'[OK] {name} {surname}')
+    time.sleep(.05)
