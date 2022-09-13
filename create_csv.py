@@ -43,7 +43,7 @@ for line in lines:
     fout.write(f'{name},')
     fout.write(f'{surname},')
     fout.write(f'{principal_name},')
-    fout.write(f'{sam}')
+    fout.write(f'{sam},')
     fout.write(f'"OU=new_users,DC={sub_domain},DC={top_domain}"\n')
     # Check if full name no longer then 20 chars
     if (len(line.strip()) > 20):
