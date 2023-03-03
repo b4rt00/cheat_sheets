@@ -129,7 +129,10 @@ Set-NetFirewallRule -DisplayName 'Windows Management Instrumentation (DCOM-In)' 
 Set-NetFirewallRule -DisplayGroup 'Remote Volume Management' -Enable True
 ```
 
+## Get installed windows features
+```powershell
 
+```
 
 
 
